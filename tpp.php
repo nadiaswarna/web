@@ -75,168 +75,102 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
    <title>Tour Planner</title>
 <style>
- 
-body, h1, h2, h3, p, ul, li, label, input, select, option, button, fieldset, legend {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
-
+/* Tour Planner */
 .container {
-    width: 80%;
-    margin: 0 auto;
+  border: 2px solid black;
+  padding: 20px;
+  width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+  border-radius: 4px;
+}
+
+.tour-text {
+  border: 2px solid black;
+  padding: 10px;
+  width: 150px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  position: absolute;
+  top: -50px;
+  font-weight: bold;
+}
+.box {
+  margin: 20px;
+}
+
+.box label {
+  font-weight: bold;
+}
+.check-btn {
+  text-align: right;
+}
+.check-btn button {
+  padding: 7px 20px;
+  border: 2px solid black;
+  border-radius: 3px;
 }
 
 
-fieldset {
-    margin: 20px auto;
-}
-</style>
+  </style>
 
 </head>
 <body>
-<fieldset style="width: 350px;">
-<legend>Tour Planner</legend>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <table>
+
+
+<form action="">
+
+<section>
+        <!-- Tour Plans -->
+        <div class="container">
+          <h2 class="tour-text">Tour Planner</h2>
+          <form class="tour-from">
+            <div class="box">
+              <label for="">Starting :</label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="box">
+              <label for="">Destination :</label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="box">
+              <label for="">Number of people :</label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="box">
+              <label for="">Place to Visit :</label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="box">
+              <label for="">Number of Day :</label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="box">
+              <label for="">Room Type :</label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="box">
+              <label for="">Starting Date :</label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="box">
+              <label for="">Return Date :</label>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="check-btn">
+              <button type="submit">Check</button>
+            </div>
+          </form>
+        </div>
+      </section>
       
       
-      <tr>
-    <td><label for="starting_point">Starting Point:</label></td>
-    <td>
-        <select name="starting_point" id="starting_point">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-           
-        </select>
-    </td>
-</tr>
-
-      
-
-      <tr>
-  <td><label for="destination">Destination:</label></td>
-  <td>
-    <select name="destination" id="destination">
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
-   
-    </select>
-  </td>
-</tr>
-
-     
-
-      <tr>
-    <td><label for="number_of_people">Number Of People:</label></td>
-    <td>
-        <select name="number_of_people" id="number_of_people">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <!-- Add more options as needed -->
-        </select>
-    </td>
-</tr>
-
-
-
-
-      
-   
-
-      <tr>
-  <td><label for="place_to_visit">Place to Visit:</label></td>
-  <td>
-    <select name="place_to_visit" id="place_to_visit">
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
-      <!-- Add more options as needed -->
-    </select>
-  </td>
-</tr>
-
-
-  
-
-      <tr>
-  <td><label for="number_of_days">Number Of Days:</label></td>
-  <td>
-    <select name="number_of_days" id="number_of_days">
-      <option value="1">1 day</option>
-      <option value="2">2 days</option>
-      <option value="3">3 days</option>
-      <option value="4">4 days</option>
-      <option value="5">5 days</option>
-      <!-- Add more options as needed -->
-    </select>
-  </td>
-</tr>
-
-
-
-
-
-      <tr>
-  <td><label for="room_type">Room Type:</label></td>
-  <td>
-    <select name="room_type" id="room_type">
-      <option value="single">Single</option>
-      <option value="double">Double</option>
-      <option value="twin">Twin</option>
-      <option value="suite">Suite</option>
-    
-    </select>
-  </td>
-</tr>
-
-
-     
-
-
-      <tr>
-  <td><label for="starting_date">Starting date:</label></td>
-  <td>
-    <select name="starting_date" id="starting_date">
-    
-      <option value="2024-03-25">March 25, 2024</option>
-      <option value="2024-03-26">March 26, 2024</option>
-      <option value="2024-03-27">March 27, 2024</option>
+</form>
  
-    </select>
-  </td>
-</tr>
 
-<tr>
-  <td><label for="return_date">Return date:</label></td>
-  <td>
-    <select name="return_date" id="return_date">
-   
-      <option value="2024-04-01">April 1, 2024</option>
-      <option value="2024-04-02">April 2, 2024</option>
-      <option value="2024-04-03">April 3, 2024</option>
-   
-    </select>
-  </td>
-</tr>
-
-
-
-      <tr>
-        <td></td>
-        <td></td>
-        <td colspan="2" align="left"><button type="submit" name="check">Check</button></td>
-      </tr>
-    </table>
-  </form>
-</fieldset>
 </body>
 </html>
+
